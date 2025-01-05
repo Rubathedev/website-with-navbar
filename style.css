@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Aligns the items to the right */
+    align-items: flex-start; /* Aligns the items at the top */
+    position: relative; /* Position the container relative to other elements */
+    list-style: none;
+}
+
+
+nav ul li {
+    text-decoration: none;
+    margin: 0 10px; /* Add spacing between list items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: flex;
+    background-color: #7fffd4;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 5px 5px 0px 0px;
+}
+ .dropdown{
+     display : none;
+ }
+ nav li a:hover{
+      display: inline-block;
+      color: black;
+      background-color: #22b886;
+ }
