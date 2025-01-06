@@ -1,38 +1,77 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Navigation Bar */
 nav ul {
     display: flex;
     justify-content: flex-end; /* Aligns the items to the right */
-    align-items: flex-start; /* Aligns the items at the top */
-    position: relative; /* Position the container relative to other elements */
-    list-style: none;
+    align-items: center; /* Centers the items vertically */
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
 }
 
-
+/* List Items */
 nav ul li {
-    text-decoration: none;
-    margin: 0 10px; /* Add spacing between list items */
+    position: relative; /* Needed for dropdown positioning */
+    margin: 0 10px; /* Space between list items */
 }
 
+/* Anchor Links */
 nav ul li a {
     text-decoration: none;
     color: black;
     padding: 10px;
-    display: flex;
+    display: block; /* Block-level for clickable area */
     background-color: #7fffd4;
     border: 2px solid black;
     border-radius: 8px;
-    margin: 5px 5px 0px 0px;
+    margin: 5px 0; /* Add spacing for better alignment */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
- .dropdown{
-     display : none;
- }
- nav li a:hover{
-      display: inline-block;
-      color: black;
-      background-color: #22b886;
- }
+
+/* Hover Effect for Links */
+nav ul li a:hover {
+    background-color: #22b886;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioned relative to the parent <li> */
+    top: 100%; /* Positioned below the parent item */
+    left: 0; /* Align with the parent */
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    border-radius: 5px;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Dropdown Links */
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown li a {
+    color: black;
+    padding: 10px 20px;
+    background-color: #7fffd4;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: block; /* Full clickable area */
+}
+
+/* Show Dropdown on Hover */
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown when hovering over parent <li> */
+}
+
+/* Hover Effect for Dropdown Links */
+.dropdown li a:hover {
+    background-color:  #22b886;
+}
